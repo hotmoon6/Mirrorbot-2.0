@@ -72,8 +72,7 @@ def start(update, context):
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('🚫 𝙽𝙾𝚃 𝙰𝚄𝚃𝙷𝙾𝚁𝙸𝚂𝙴𝙳 𝚄𝚂𝙴𝚁
-𝚆𝙷𝙾 𝚃𝙷𝙴 𝙷𝙴𝙻𝙻 𝙰𝚁𝙴 𝚈𝙾𝚄?', context.bot, update.message, reply_markup)
+        sendMarkup('🚫 𝙽𝙾𝚃 𝙰𝚄𝚃𝙷𝙾𝚁𝙸𝚂𝙴𝙳 𝚄𝚂𝙴𝚁 ! 𝚆𝙷𝙾 𝚃𝙷𝙴 𝙷𝙴𝙻𝙻 𝙰𝚁𝙴 𝚈𝙾𝚄?', context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
