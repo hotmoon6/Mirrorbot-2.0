@@ -37,7 +37,7 @@ try:
     if len(UPSTREAM_REPO) == 0:
        raise TypeError
 except TypeError:
-    UPSTREAM_REPO = "https://github.com/anasty17/mirror-leech-telegram-bot"
+    UPSTREAM_REPO = "https://github.com/hotmoon6/Mirrorbot-2.0"
 try:
     if len(UPSTREAM_BRANCH) == 0:
        raise TypeError
