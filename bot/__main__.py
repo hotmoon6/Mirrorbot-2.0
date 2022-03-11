@@ -59,17 +59,21 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot")
-    buttons.buildbutton("Report Group", "https://t.me/+PRRzqHd31XY3ZWZk")
+    buttons.buildbutton("Alice", "https://www.telegram.dog/alice_mirrorbot")
+    buttons.buildbutton("Laura", "https://telegram.dog/laura_mirrorbot")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+𝙷𝙴𝙻𝙻𝙾 𝙸'𝙼 🌹𝚁𝙴𝙳𝚀𝚄𝙴𝙴𝙽 !
+𝙸 𝙰𝙼 𝙰𝙽 𝙰𝙳𝚅𝙰𝙽𝙲𝙴𝙳 𝚂𝚄𝙿𝙴𝚁 𝙲𝙾𝙼𝙿𝚄𝚃𝙴𝚁 𝚆𝙸𝚃𝙷 𝙰𝚁𝚃𝙸𝙵𝙸𝙲𝙸𝙰𝙻 𝙸𝙽𝚃𝙴𝙻𝙻𝙸𝙶𝙴𝙽𝙲𝙴.
+
+⚠️ 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝙳 𝙱𝚈 
+𝚄𝙼𝙱𝚁𝙴𝙻𝙻𝙰 𝙲𝙾𝚁𝙿𝙾𝚁𝙰𝚃𝙸𝙾𝙽
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('Not Authorized user, deploy your own mirror-leech bot', context.bot, update.message, reply_markup)
+        sendMarkup('🚫 𝙽𝙾𝚃 𝙰𝚄𝚃𝙷𝙾𝚁𝙸𝚂𝙴𝙳 𝚄𝚂𝙴𝚁
+𝚆𝙷𝙾 𝚃𝙷𝙴 𝙷𝙴𝙻𝙻 𝙰𝚁𝙴 𝚈𝙾𝚄?', context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
